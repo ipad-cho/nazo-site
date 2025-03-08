@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>パスワード入力</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        input, button {
+            font-size: 1.2em;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        function checkPassword() {
+            const password = document.getElementById("password").value;
+            if (password === "テスト") {
+                window.location.href = "success.html";
+            } else {
+                alert("パスワードが違います");
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="password" id="password" placeholder="パスワード入力">
+    <button onclick="checkPassword()">完了</button>
+</body>
+</html>
