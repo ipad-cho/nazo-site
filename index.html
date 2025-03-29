@@ -23,8 +23,10 @@
     <script>
         function checkPassword() {
             const password = document.getElementById("password").value;
-            if (password === "テスト") {
+            if (password === "0312") {
                 window.location.href = "success.html";
+            } else if (password === "cake" || password === "CAKE") {
+                window.location.href = "last.html";
             } else {
                 alert("パスワードが違います");
             }
@@ -32,7 +34,7 @@
     </script>
 </head>
 <body>
-    <input type="password" id="password" placeholder="パスワード入力">
+    <input type="text" maxlength="4" id="password" placeholder="パスワード入力">
     <button onclick="checkPassword()">完了</button>
 </body>
 </html>
